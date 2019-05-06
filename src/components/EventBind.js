@@ -47,4 +47,4 @@ class EventBind extends Component {
 
 export default EventBind
 
-// TESTING #3
+// TESTING #3 ssh-add -K in terminal seems to fix password prompt
