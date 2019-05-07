@@ -43,9 +43,7 @@ function NameList() {
     }
   ]
   // This component is responsbile for rendering the list
-  const personList = persons.map(person => 
-    <Person person={person}/> // Passing in the person as a prop person={person}
-  )
+  const personList = persons.map(person => <Person key={person.id} person={person} />) // Passing in the person as a prop person={person}. Also giving person a Key Value pair of the persons ID. 
   return <div>{personList}</div>
   
 
