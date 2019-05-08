@@ -4,6 +4,7 @@ import './App.css';
 import PureComp from './components/PureComp';
 import RegComp from './components/RegComp';
 import ParentComp from './components/ParentComp';
+import MemoComp from './components/MemoComp';
 // import Greet from './components/Greet';
 // import Welcome from './components/Welcome';
 // import Hello from './components/Hello';
@@ -29,6 +30,7 @@ import ParentComp from './components/ParentComp';
 function App() {
   return (
     <div className="App">
+    <MemoComp />
     <ParentComp />
     {/* <PureComp /> */}
     {/* <RegComp /> */}
