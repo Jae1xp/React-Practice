@@ -1,6 +1,9 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
+import PureComp from './components/PureComp';
+import RegComp from './components/RegComp';
+import ParentComp from './components/ParentComp';
 // import Greet from './components/Greet';
 // import Welcome from './components/Welcome';
 // import Hello from './components/Hello';
@@ -20,13 +23,16 @@ import './App.css';
 // import LifecycleA from './components/LifecycleA';
 // import LifecycleB from './components/LifecycleB';
 // import FragmentDemo from './components/FragmentDemo';
-import Table from './components/Table';
+// import Table from './components/Table';
 
 
 function App() {
   return (
     <div className="App">
-    <Table />
+    <ParentComp />
+    {/* <PureComp /> */}
+    {/* <RegComp /> */}
+    {/* <Table /> */}
     {/* <FragmentDemo /> */}
     {/* <LifecycleA /> */}
     {/* <LifecycleB /> */}
