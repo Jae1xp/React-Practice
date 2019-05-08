@@ -17,14 +17,18 @@ import './App.css';
 // import './appStyles.css';
 // import styles from './appStyles.module.css';
 // import Form from './components/Form';
-import LifecycleA from './components/LifecycleA';
+// import LifecycleA from './components/LifecycleA';
 // import LifecycleB from './components/LifecycleB';
+// import FragmentDemo from './components/FragmentDemo';
+import Table from './components/Table';
 
 
 function App() {
   return (
     <div className="App">
-    <LifecycleA />
+    <Table />
+    {/* <FragmentDemo /> */}
+    {/* <LifecycleA /> */}
     {/* <LifecycleB /> */}
     {/* <Form /> */}
     {/* <h1 className='error'>Error</h1>
