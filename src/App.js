@@ -2,6 +2,8 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import RefsDemo from './components/RefsDemo';
+import Input from './components/Input';
+import FocusInput from './components/FocusInput';
 // import PureComp from './components/PureComp';
 // import RegComp from './components/RegComp';
 // import ParentComp from './components/ParentComp';
@@ -31,7 +33,9 @@ import RefsDemo from './components/RefsDemo';
 function App() {
   return (
     <div className="App">
-    <RefsDemo />
+    <FocusInput />
+    {/* <Input /> */}
+    {/* <RefsDemo /> */}
     {/* <MemoComp /> */}
     {/* <ParentComp /> */}
     {/* <PureComp /> */}
