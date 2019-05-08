@@ -1,10 +1,12 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import RefsDemo from './components/RefsDemo';
-import Input from './components/Input';
-import FocusInput from './components/FocusInput';
-import FRParentInput from './components/FRParentInput';
+// import RefsDemo from './components/RefsDemo';
+// import Input from './components/Input';
+// import FocusInput from './components/FocusInput';
+// import FRParentInput from './components/FRParentInput';
+import Hero from './components/Hero';
+import ErrorBoundary from './components/ErrorBoundary';
 // import PureComp from './components/PureComp';
 // import RegComp from './components/RegComp';
 // import ParentComp from './components/ParentComp';
@@ -34,7 +36,18 @@ import FRParentInput from './components/FRParentInput';
 function App() {
   return (
     <div className="App">
-    <FRParentInput />
+    <ErrorBoundary>
+      <Hero heroName="Batman" />
+    </ErrorBoundary>
+
+    <ErrorBoundary>
+      <Hero heroName="Superman" />
+    </ErrorBoundary>
+    
+    <ErrorBoundary>
+      <Hero heroName="Joker" />
+    </ErrorBoundary>
+    {/* <FRParentInput /> */}
     {/* <FocusInput /> */}
     {/* <Input /> */}
     {/* <RefsDemo /> */}
