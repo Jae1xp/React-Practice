@@ -12,6 +12,12 @@ class LifecycleA extends Component {
     
   }
 
+  changeState = () => {
+    this.setState({
+      name: 'Sean'
+    })
+  }
+
   static getDerivedStateFromProps(props, state) {
     console.log('Lifecycle A getDerivedStateFromProps');
     return null
@@ -22,12 +28,27 @@ class LifecycleA extends Component {
     
   }
 
+  shouldComponentUpdate() {
+    console.log('Lifecycle A shouldComponentUpdate');
+    return true    
+  }
+
+  getSnapshotBeforeUpdate() {
+    console.log('Lifecycle A getSnapshotBeforeUpdate');
+    return null;
+  }
+
+  componentDidUpdate() {
+    console.log('Lifecycle A componentDidUpdate');
+  }
+
   render() {
     console.log('Lifecycle A render');
     
     return (
       <div>
         <div>Lifecycle A</div>
+        <button onClick={this.changeState}>Change state</button>
         <LifecycleB />
       </div>
     )
