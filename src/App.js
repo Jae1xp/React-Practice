@@ -1,10 +1,11 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import PureComp from './components/PureComp';
-import RegComp from './components/RegComp';
-import ParentComp from './components/ParentComp';
-import MemoComp from './components/MemoComp';
+import RefsDemo from './components/RefsDemo';
+// import PureComp from './components/PureComp';
+// import RegComp from './components/RegComp';
+// import ParentComp from './components/ParentComp';
+// import MemoComp from './components/MemoComp';
 // import Greet from './components/Greet';
 // import Welcome from './components/Welcome';
 // import Hello from './components/Hello';
@@ -30,8 +31,9 @@ import MemoComp from './components/MemoComp';
 function App() {
   return (
     <div className="App">
-    <MemoComp />
-    <ParentComp />
+    <RefsDemo />
+    {/* <MemoComp /> */}
+    {/* <ParentComp /> */}
     {/* <PureComp /> */}
     {/* <RegComp /> */}
     {/* <Table /> */}
