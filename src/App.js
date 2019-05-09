@@ -7,6 +7,8 @@ import './App.css';
 // import FRParentInput from './components/FRParentInput';
 import Hero from './components/Hero';
 import ErrorBoundary from './components/ErrorBoundary';
+import ClickCounter from './components/ClickCounter';
+import HoverCounter from './components/HoverCounter';
 // import PureComp from './components/PureComp';
 // import RegComp from './components/RegComp';
 // import ParentComp from './components/ParentComp';
@@ -36,17 +38,19 @@ import ErrorBoundary from './components/ErrorBoundary';
 function App() {
   return (
     <div className="App">
-    <ErrorBoundary>
+    <ClickCounter />
+    <HoverCounter />
+    {/* <ErrorBoundary>
       <Hero heroName="Batman" />
     </ErrorBoundary>
 
     <ErrorBoundary>
       <Hero heroName="Superman" />
     </ErrorBoundary>
-    
+
     <ErrorBoundary>
       <Hero heroName="Joker" />
-    </ErrorBoundary>
+    </ErrorBoundary> */}
     {/* <FRParentInput /> */}
     {/* <FocusInput /> */}
     {/* <Input /> */}
