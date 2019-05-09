@@ -5,10 +5,12 @@ import './App.css';
 // import Input from './components/Input';
 // import FocusInput from './components/FocusInput';
 // import FRParentInput from './components/FRParentInput';
-import Hero from './components/Hero';
-import ErrorBoundary from './components/ErrorBoundary';
-import ClickCounter from './components/ClickCounter';
-import HoverCounter from './components/HoverCounter';
+import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/UserContext';
+// import Hero from './components/Hero';
+// import ErrorBoundary from './components/ErrorBoundary';
+// import ClickCounter from './components/ClickCounter';
+// import HoverCounter from './components/HoverCounter';
 // import PureComp from './components/PureComp';
 // import RegComp from './components/RegComp';
 // import ParentComp from './components/ParentComp';
@@ -38,8 +40,11 @@ import HoverCounter from './components/HoverCounter';
 function App() {
   return (
     <div className="App">
-    <ClickCounter name="Jae" />
-    <HoverCounter />
+    <UserProvider value="Jae">
+      <ComponentC />
+    </UserProvider>
+    {/* <ClickCounter name="Jae" />
+    <HoverCounter /> */}
     {/* <ErrorBoundary>
       <Hero heroName="Batman" />
     </ErrorBoundary>
