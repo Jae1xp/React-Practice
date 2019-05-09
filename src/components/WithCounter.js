@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // This is a HOC component. It is a function that accepts the original component and returns a new one
-const WithCounter = (WrappedComponent) => { // Parameter is the component being passed in. Typically named wrapped
+const WithCounter = (WrappedComponent, incrementNumber) => { // Parameter is the component being passed in. Typically named wrapped. Increment number is another parameter that we are incrementing by in the incrementCount method, and then passing in a value on the lower level components export default. See ClickCounter and HoverCounter components
   class WithCounter extends React.Component {
     constructor(props) {
       super(props)
@@ -13,14 +13,15 @@ const WithCounter = (WrappedComponent) => { // Parameter is the component being 
     
     incrementCount = () => {
       this.setState(prevState => {
-        return { count: prevState.count + 1 }
+        return { count: prevState.count + incrementNumber }
       })
     }
 
     render() {
       return <WrappedComponent 
       count={this.state.count} 
-      incrementCount={this.incrementCount} />
+      incrementCount={this.incrementCount} 
+      {...this.props} /> // passes down the remaining props that have been specified (name prop in app.js)
     }
   }
   return WithCounter

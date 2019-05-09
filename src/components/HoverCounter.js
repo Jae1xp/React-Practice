@@ -8,10 +8,10 @@ class HoverCounter extends Component {
     const { count, incrementCount } = this.props
     return (
       <div>
-        <h2 onMouseOver={incrementCount}> Hovered {count} times</h2>
+        <h2 onMouseOver={incrementCount}>{this.props.name} Hovered {count} times</h2>
       </div>
     )
   }
 }
 
-export default WithCounter(HoverCounter)
+export default WithCounter(HoverCounter, 10) // value of 10 being passed in as a parameter inside WithCounter component
